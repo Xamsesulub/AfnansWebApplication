@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart - AfnanBakes</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+<body>
+<!-- Navigation -->
+<nav>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="cakes.html">Cakes</a></li>
+        <li><a href="cupcakes.html">Cupcakes</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="cart.html" class="active">Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Signup</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Cart Section -->
+<div class="cart-container">
+    <h1 class="page-title">Your Shopping Cart</h1>
+
+    <!-- Cart Items Loaded Dynamically -->
+    <div id="cart-items-container">
+        <!-- Products will be injected here from script.js -->
+    </div>
+
+    <!-- Cart Total -->
+    <div class="cart-total">
+        <h3>Total: <span id="total-price" class="total-price">0 NOK</span></h3>
+    </div>
+
+    <!-- Cart Actions -->
+    <div style="text-align: center;">
+        <a href="payment.html" class="btn">Proceed to Payment</a>
+        <a href="cakes.html" class="btn btn-secondary">Continue Shopping</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <p>
+            AfnanBakes is a local bakery specializing in handcrafted cakes,
+            cupcakes, and cookies for all celebrations.
+        </p>
+        <div class="social-icons">
+            <a href="#" title="Instagram">📷</a>
+            <a href="#" title="Facebook">👍</a>
+            <a href="#" title="TikTok">🎵</a>
+        </div>
+        <p class="copyright">Copyright © 2025 AfnanBakes</p>
+    </div>
+</footer>
+</body>
+</html>

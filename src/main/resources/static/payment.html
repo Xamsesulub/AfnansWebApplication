@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment - AfnanBakes</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="cakes.html">Cakes</a></li>
+        <li><a href="cupcakes.html">Cupcakes</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Signup</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="form-container">
+    <h1 class="page-title">Payment Details</h1>
+
+    <form onsubmit="handlePayment(event)">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required />
+        </div>
+
+        <div class="form-group">
+            <label for="expiry">Expiration Date</label>
+            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" maxlength="5" required />
+        </div>
+
+        <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" required />
+        </div>
+
+        <div class="form-group">
+            <label for="delivery-date">Delivery Date</label>
+            <input type="date" id="delivery-date" name="delivery-date" required />
+        </div>
+
+        <div class="cart-total" style="margin-bottom: 2rem;">
+            <h3>Total Amount: <span class="total-price">700 NOK</span></h3>
+        </div>
+
+        <button type="submit" class="btn" style="width: 100%;">Pay Now</button>
+    </form>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p>
+            AfnanBakes is a local bakery specializing in handcrafted cakes,
+            cupcakes, and cookies for all celebrations.
+        </p>
+        <div class="social-icons">
+            <a href="#" title="Instagram">📷</a>
+            <a href="#" title="Facebook">👍</a>
+            <a href="#" title="TikTok">🎵</a>
+        </div>
+        <p class="copyright">Copyright © 2025 AfnanBakes</p>
+    </div>
+</footer>
+
+
+</body>
+</html>

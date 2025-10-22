@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Account - AfnanBakes</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="cakes.html">Cakes</a></li>
+        <li><a href="cupcakes.html">Cupcakes</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Signup</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h1 class="page-title">My Account</h1>
+
+    <!-- Account Info -->
+    <div class="account-section">
+        <h2>Account Information</h2>
+        <div class="account-info">
+            <p><strong>Name:</strong> Afnan Ahmed</p>
+            <p><strong>Email:</strong> afnan@afnanbakes.com</p>
+            <p><strong>Member Since:</strong> January 2025</p>
+        </div>
+        <button class="btn" onclick="showChangePassword()">Change Password</button>
+
+        <div id="change-password-form" style="display: none; margin-top: 2rem;">
+            <form onsubmit="handleChangePassword(event)">
+                <div class="form-group">
+                    <label for="old-password">Old Password</label>
+                    <input type="password" id="old-password" name="old-password" required />
+                </div>
+                <div class="form-group">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password" name="new-password" required />
+                </div>
+                <button type="submit" class="btn">Update Password</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order History -->
+    <div class="account-section">
+        <h2>Order History</h2>
+        <div class="orders-list">
+            <div class="order-item">
+                <p><strong>Order #1234</strong></p>
+                <p>Date: October 15, 2025</p>
+                <p>Total: 700 NOK</p>
+                <p>Status: Delivered</p>
+            </div>
+            <div class="order-item">
+                <p><strong>Order #1235</strong></p>
+                <p>Date: October 10, 2025</p>
+                <p>Total: 400 NOK</p>
+                <p>Status: Delivered</p>
+            </div>
+            <div class="order-item">
+                <p><strong>Order #1236</strong></p>
+                <p>Date: September 28, 2025</p>
+                <p>Total: 320 NOK</p>
+                <p>Status: Delivered</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="account-section">
+        <h2>Contact Us</h2>
+        <button class="btn" onclick="showEmailForm()">Send Us an Email</button>
+
+        <div id="email-form" style="display: none; margin-top: 2rem;">
+            <form onsubmit="handleSendEmail(event)">
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required />
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Email</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p>
+            AfnanBakes is a local bakery specializing in handcrafted cakes, cupcakes,
+            and cookies for all celebrations.
+        </p>
+        <div class="social-icons">
+            <a href="#" title="Instagram">📷</a>
+            <a href="#" title="Facebook">👍</a>
+            <a href="#" title="TikTok">🎵</a>
+        </div>
+        <p class="copyright">Copyright © 2025 AfnanBakes</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
