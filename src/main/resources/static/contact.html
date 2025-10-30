@@ -1,73 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - AfnanBakes</title>
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="cakes.html">Cakes</a></li>
-        <li><a href="cupcakes.html">Cupcakes</a></li>
-        <li><a href="cookies.html">Cookies</a></li>
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Signup</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
-<div class="form-container">
-    <h1 class="page-title">Get in Touch</h1>
-    <p style="text-align: center; margin-bottom: 2rem; color: #666;">
-        Have a question or want to place a custom order? We'd love to hear from you!
-    </p>
-
-    <form id="contact-form" onsubmit="handleContact(event)">
-        <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required />
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">AfnanBakes</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cakes.html">Cakes</a></li>
+                <li><a href="cupcakes.html">Cupcakes</a></li>
+                <li><a href="cookies.html">Cookies</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="cart.html" class="cart-link">Cart <span id="cart-count">0</span></a></li>
+                <li id="auth-nav"></li>
+            </ul>
         </div>
+    </nav>
+</header>
 
-        <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required />
+<main>
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with us for custom orders or inquiries</p>
         </div>
+    </section>
 
-        <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form id="contact-form" onsubmit="handleContactSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <div id="contact-success" class="success-message" style="display: none;">
+                            Thank you for your message! We'll get back to you soon.
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <h2>Business Hours</h2>
+                    <div class="info-card">
+                        <h3>Opening Hours</h3>
+                        <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</p>
+                        <p><strong>Saturday:</strong> 10:00 AM - 4:00 PM</p>
+                        <p><strong>Sunday:</strong> Closed</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Get In Touch</h3>
+                        <p><strong>Email:</strong> info@afnanbakes.com</p>
+                        <p><strong>Phone:</strong> (555) 123-4567</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Custom Orders</h3>
+                        <p>For custom cakes and special orders, please contact us at least 3 days in advance. We love bringing your ideas to life!</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <button type="submit" class="btn" style="width: 100%;">Send Message</button>
-    </form>
-
-    <div class="contact-info">
-        <h3>Business Hours</h3>
-        <p>We are available from 09:00 to 20:00 every day.</p>
-        <p>Phone: +47 123 45 678</p>
-        <p>Email: hello@afnanbakes.com</p>
-        <p>Address: Bakery Street 123, Oslo, Norway</p>
-    </div>
-</div>
+    </section>
+</main>
 
 <footer>
-    <div class="footer-content">
-        <p>
-            AfnanBakes is a local bakery specializing in handcrafted cakes, cupcakes,
-            and cookies for all celebrations.
-        </p>
-        <div class="social-icons">
-            <a href="#" title="Instagram">📷</a>
-            <a href="#" title="Facebook">👍</a>
-            <a href="#" title="TikTok">🎵</a>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AfnanBakes</h4>
+                <p>Baking happiness since 2020</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">My Account</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="cakes.html">Cakes</a></li>
+                    <li><a href="cupcakes.html">Cupcakes</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                </ul>
+            </div>
         </div>
-        <p class="copyright">Copyright © 2025 AfnanBakes</p>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AfnanBakes. All rights reserved.</p>
+        </div>
     </div>
 </footer>
 

@@ -1,99 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - AfnanBakes</title>
     <link rel="stylesheet" href="style.css" />
-    <script  defer src="script.js"></script>
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="cakes.html">Cakes</a></li>
-        <li><a href="cupcakes.html">Cupcakes</a></li>
-        <li><a href="cookies.html">Cookies</a></li>
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Signup</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
-<div class="container">
-    <h1 class="page-title">About AfnanBakes</h1>
-
-    <div class="about-section">
-        <div class="about-image">
-            <img
-                    src="https://images.pexels.com/photos/1702373/pexels-photo-1702373.jpeg?auto=compress&cs=tinysrgb&w=800"
-                    alt="AfnanBakes Bakery"
-            />
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">AfnanBakes</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cakes.html">Cakes</a></li>
+                <li><a href="cupcakes.html">Cupcakes</a></li>
+                <li><a href="cookies.html">Cookies</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link">Cart <span id="cart-count">0</span></a></li>
+                <li id="auth-nav"></li>
+            </ul>
         </div>
-        <div class="about-content">
-            <h2>Our Story</h2>
-            <p>
-                AfnanBakes is a local bakery specializing in handcrafted cakes, cupcakes, and cookies for all
-                celebrations. Founded with a passion for baking and a love for creating memorable moments, we take
-                pride in every creation that leaves our kitchen.
-            </p>
-            <p>
-                Our journey began with a simple belief: every celebration deserves a beautiful, delicious centerpiece.
-                From intimate birthday gatherings to grand weddings, we pour our heart into every cake, ensuring that
-                each bite tastes like love.
-            </p>
-            <p>
-                We use only the finest ingredients, traditional baking techniques, and modern design aesthetics to
-                create treats that are as beautiful as they are delicious.
-            </p>
-        </div>
-    </div>
+    </nav>
+</header>
 
-    <div class="about-section" style="margin-top: 3rem;">
-        <div class="about-content">
-            <h2>What We Offer</h2>
-            <p>
-                At AfnanBakes, we specialize in custom cakes for weddings, birthdays, anniversaries, and all special
-                occasions. Our menu also includes delightful cupcakes and cookies that are perfect for parties, gifts,
-                or simply treating yourself.
-            </p>
-            <p>
-                Every product is made fresh to order, ensuring the highest quality and taste. We work closely with our
-                customers to bring their vision to life, whether it's a classic design or something completely unique.
-            </p>
-            <p>We believe in making every celebration sweeter, one treat at a time.</p>
+<main>
+    <section class="page-header">
+        <div class="container">
+            <h1>About AfnanBakes</h1>
+            <p>Our story of baking happiness</p>
         </div>
-        <div class="about-image">
-            <img
-                    src="https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&w=800"
-                    alt="AfnanBakes Products"
-            />
-        </div>
-    </div>
+    </section>
 
-    <div style="text-align: center; margin-top: 3rem;">
-        <a href="cakes.html" class="btn">View Our Cakes</a>
-        <a href="contact.html" class="btn btn-secondary">Contact Us</a>
-    </div>
-</div>
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-story">
+                    <h2>Our Story</h2>
+                    <p>AfnanBakes was born from a passion for creating delicious, beautiful baked goods that bring joy to every celebration. What started as a small home bakery in 2020 has grown into a beloved local business, serving our community with handcrafted cakes, cupcakes, and cookies.</p>
+
+                    <p>Every product we create is made with the finest ingredients and a generous helping of love. We believe that great baking is about more than just following recipes – it's about understanding what makes each celebration special and creating something that will make those moments even more memorable.</p>
+                </div>
+
+                <div class="about-image">
+                    <img src="https://images.pexels.com/photos/2955820/pexels-photo-2955820.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bakery">
+                </div>
+            </div>
+
+            <div class="values-section">
+                <h2>Our Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <h3>Quality First</h3>
+                        <p>We use only the finest ingredients to ensure every bite is delicious. No shortcuts, no compromises.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <h3>Made Fresh</h3>
+                        <p>Everything is baked fresh to order. We never use pre-made or frozen products.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <h3>Custom Creations</h3>
+                        <p>Every celebration is unique, and we love creating custom designs that reflect your vision.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <h3>Customer Care</h3>
+                        <p>Your satisfaction is our priority. We work closely with you to ensure your order is perfect.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mission-section">
+                <h2>Our Mission</h2>
+                <p>To create exceptional baked goods that bring people together and make every celebration sweeter. We're not just baking cakes – we're helping create memories that last a lifetime.</p>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer>
-    <div class="footer-content">
-        <p>
-            AfnanBakes is a local bakery specializing in handcrafted cakes, cupcakes, and cookies for all
-            celebrations.
-        </p>
-        <div class="social-icons">
-            <a href="#" title="Instagram">📷</a>
-            <a href="#" title="Facebook">👍</a>
-            <a href="#" title="TikTok">🎵</a>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AfnanBakes</h4>
+                <p>Baking happiness since 2020</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">My Account</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="cakes.html">Cakes</a></li>
+                    <li><a href="cupcakes.html">Cupcakes</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                </ul>
+            </div>
         </div>
-        <p class="copyright">Copyright © 2025 AfnanBakes</p>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AfnanBakes. All rights reserved.</p>
+        </div>
     </div>
 </footer>
 
-
+<script defer src="main.js"></script>
 </body>
 </html>

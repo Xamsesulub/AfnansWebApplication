@@ -1,75 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details - AfnanBakes</title>
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="cakes.html">Cakes</a></li>
-        <li><a href="cupcakes.html">Cupcakes</a></li>
-        <li><a href="cookies.html">Cookies</a></li>
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Signup</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
-<div class="container">
-    <div class="product-detail">
-        <div class="product-detail-image">
-            <img
-                    src="https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?auto=compress&cs=tinysrgb&w=800"
-                    alt="Wedding Elegance Cake"
-            />
-        </div>
-
-        <div class="product-detail-info">
-            <h1>Wedding Elegance</h1>
-            <p class="price">400 NOK</p>
-            <p>
-                Our Wedding Elegance cake is a stunning three-tier masterpiece, perfect for your special day.
-                Made with premium ingredients and decorated with delicate fondant flowers, this cake is both
-                beautiful and delicious.
-            </p>
-
-            <p>Features:</p>
-            <ul style="margin-left: 2rem; margin-bottom: 2rem; line-height: 2;">
-                <li>Three tiers of moist vanilla sponge</li>
-                <li>Smooth buttercream frosting</li>
-                <li>Handcrafted fondant decorations</li>
-                <li>Serves 30–40 people</li>
-                <li>Custom colors available</li>
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">AfnanBakes</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cakes.html">Cakes</a></li>
+                <li><a href="cupcakes.html">Cupcakes</a></li>
+                <li><a href="cookies.html">Cookies</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link">Cart <span id="cart-count">0</span></a></li>
+                <li id="auth-nav"></li>
             </ul>
-
-            <button class="btn" onclick="addToCart('Wedding Elegance', '400')">Add to Cart</button>
-            <br /><br />
-            <a href="cakes.html" class="btn btn-secondary">Back to Shop</a>
         </div>
-    </div>
-</div>
+    </nav>
+</header>
+
+<main>
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="product-detail">
+                <div class="product-detail-image">
+                    <img id="product-image" src="" alt="">
+                </div>
+                <div class="product-detail-info">
+                    <h1 id="product-name"></h1>
+                    <p id="product-description" class="product-description"></p>
+                    <p class="price-large" id="product-price"></p>
+
+                    <div class="quantity-selector">
+                        <label for="quantity">Quantity:</label>
+                        <div class="quantity-controls">
+                            <button class="btn-quantity" onclick="decreaseQuantity()">-</button>
+                            <input type="number" id="quantity" value="1" min="1" readonly>
+                            <button class="btn-quantity" onclick="increaseQuantity()">+</button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-large" onclick="addToCartFromProduct()">Add to Cart</button>
+                    <a href="cakes.html" class="btn btn-secondary btn-large">Back to Products</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer>
-    <div class="footer-content">
-        <p>
-            AfnanBakes is a local bakery specializing in handcrafted cakes, cupcakes, and cookies for all
-            celebrations.
-        </p>
-        <div class="social-icons">
-            <a href="#" title="Instagram">📷</a>
-            <a href="#" title="Facebook">👍</a>
-            <a href="#" title="TikTok">🎵</a>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AfnanBakes</h4>
+                <p>Baking happiness since 2020</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">My Account</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="cakes.html">Cakes</a></li>
+                    <li><a href="cupcakes.html">Cupcakes</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                </ul>
+            </div>
         </div>
-        <p class="copyright">Copyright © 2025 AfnanBakes</p>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AfnanBakes. All rights reserved.</p>
+        </div>
     </div>
 </footer>
+
 
 </body>
 </html>

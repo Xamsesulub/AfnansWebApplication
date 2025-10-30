@@ -1,115 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Account - AfnanBakes</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
+    <script  defer src="main.js"></script>
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="cakes.html">Cakes</a></li>
-        <li><a href="cupcakes.html">Cupcakes</a></li>
-        <li><a href="cookies.html">Cookies</a></li>
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Signup</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
-<div class="container">
-    <h1 class="page-title">My Account</h1>
-
-    <!-- Account Info -->
-    <div class="account-section">
-        <h2>Account Information</h2>
-        <div class="account-info">
-            <p><strong>Name:</strong> Afnan Ahmed</p>
-            <p><strong>Email:</strong> afnan@afnanbakes.com</p>
-            <p><strong>Member Since:</strong> January 2025</p>
-        </div>
-        <button class="btn" onclick="showChangePassword()">Change Password</button>
-
-        <div id="change-password-form" style="display: none; margin-top: 2rem;">
-            <form onsubmit="handleChangePassword(event)">
-                <div class="form-group">
-                    <label for="old-password">Old Password</label>
-                    <input type="password" id="old-password" name="old-password" required />
-                </div>
-                <div class="form-group">
-                    <label for="new-password">New Password</label>
-                    <input type="password" id="new-password" name="new-password" required />
-                </div>
-                <button type="submit" class="btn">Update Password</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Order History -->
-    <div class="account-section">
-        <h2>Order History</h2>
-        <div class="orders-list">
-            <div class="order-item">
-                <p><strong>Order #1234</strong></p>
-                <p>Date: October 15, 2025</p>
-                <p>Total: 700 NOK</p>
-                <p>Status: Delivered</p>
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">AfnanBakes</a>
             </div>
-            <div class="order-item">
-                <p><strong>Order #1235</strong></p>
-                <p>Date: October 10, 2025</p>
-                <p>Total: 400 NOK</p>
-                <p>Status: Delivered</p>
-            </div>
-            <div class="order-item">
-                <p><strong>Order #1236</strong></p>
-                <p>Date: September 28, 2025</p>
-                <p>Total: 320 NOK</p>
-                <p>Status: Delivered</p>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cakes.html">Cakes</a></li>
+                <li><a href="cupcakes.html">Cupcakes</a></li>
+                <li><a href="cookies.html">Cookies</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link">Cart <span id="cart-count">0</span></a></li>
+                <li id="auth-nav"></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="page-header">
+        <div class="container">
+            <h1>My Account</h1>
+        </div>
+    </section>
+
+    <section class="account-section">
+        <div class="container">
+            <div class="account-grid">
+                <div class="account-sidebar">
+                    <h3>Account Menu</h3>
+                    <ul class="account-menu">
+                        <li><a href="#profile" class="active">Profile</a></li>
+                        <li><a href="#orders">My Orders</a></li>
+                        <li><a href="#password">Change Password</a></li>
+                    </ul>
+                </div>
+
+                <div class="account-content">
+                    <div id="profile-section" class="account-panel">
+                        <h2>Profile Information</h2>
+                        <div class="profile-info">
+                            <p><strong>Name:</strong> <span id="user-name"></span></p>
+                            <p><strong>Email:</strong> <span id="user-email"></span></p>
+                            <p><strong>Phone:</strong> <span id="user-phone"></span></p>
+                            <p><strong>Address:</strong> <span id="user-address"></span></p>
+                        </div>
+                    </div>
+
+                    <div id="orders-section" class="account-panel" style="display: none;">
+                        <h2>My Orders</h2>
+                        <div id="orders-list"></div>
+                    </div>
+
+                    <div id="password-section" class="account-panel" style="display: none;">
+                        <h2>Change Password</h2>
+                        <form id="password-form" onsubmit="handlePasswordChange(event)">
+                            <div class="form-group">
+                                <label for="new-password">New Password *</label>
+                                <input type="password" id="new-password" name="new-password" minlength="6" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirm-new-password">Confirm New Password *</label>
+                                <input type="password" id="confirm-new-password" name="confirm-new-password" minlength="6" required>
+                            </div>
+
+                            <div id="password-error" class="error-message" style="display: none;"></div>
+                            <div id="password-success" class="success-message" style="display: none;"></div>
+
+                            <button type="submit" class="btn btn-primary">Update Password</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="account-section">
-        <h2>Contact Us</h2>
-        <button class="btn" onclick="showEmailForm()">Send Us an Email</button>
-
-        <div id="email-form" style="display: none; margin-top: 2rem;">
-            <form onsubmit="handleSendEmail(event)">
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required />
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Email</button>
-            </form>
-        </div>
-    </div>
-</div>
+    </section>
+</main>
 
 <footer>
-    <div class="footer-content">
-        <p>
-            AfnanBakes is a local bakery specializing in handcrafted cakes, cupcakes,
-            and cookies for all celebrations.
-        </p>
-        <div class="social-icons">
-            <a href="#" title="Instagram">📷</a>
-            <a href="#" title="Facebook">👍</a>
-            <a href="#" title="TikTok">🎵</a>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AfnanBakes</h4>
+                <p>Baking happiness since 2020</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">My Account</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="cakes.html">Cakes</a></li>
+                    <li><a href="cupcakes.html">Cupcakes</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                </ul>
+            </div>
         </div>
-        <p class="copyright">Copyright © 2025 AfnanBakes</p>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AfnanBakes. All rights reserved.</p>
+        </div>
     </div>
 </footer>
 
-<script src="script.js"></script>
+
 </body>
 </html>

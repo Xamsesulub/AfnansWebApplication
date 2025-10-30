@@ -1,86 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookies - AfnanBakes</title>
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="cakes.html">Cakes</a></li>
-        <li><a href="cupcakes.html">Cupcakes</a></li>
-        <li><a href="cookies.html">Cookies</a></li>
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Signup</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
-<div class="container">
-    <h1 class="page-title">Our Cookies</h1>
-    <div class="product-grid">
-        <div class="product-card">
-            <img src="https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chocolate Chip Cookies" />
-            <h3>Chocolate Chip Classic</h3>
-            <p class="price">120 NOK</p>
-            <a href="product.html?product=chocolate-chip-cookies" class="btn">View Details</a>
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">AfnanBakes</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cakes.html">Cakes</a></li>
+                <li><a href="cupcakes.html">Cupcakes</a></li>
+                <li><a href="cookies.html" class="active">Cookies</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link">Cart <span id="cart-count">0</span></a></li>
+                <li id="auth-nav"></li>
+            </ul>
         </div>
+    </nav>
+</header>
 
-        <div class="product-card">
-            <img src="https://images.pexels.com/photos/1179002/pexels-photo-1179002.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sugar Cookies" />
-            <h3>Sugar Cookie Delight</h3>
-            <p class="price">100 NOK</p>
-            <a href="product.html?product=sugar-cookies" class="btn">View Details</a>
+<main>
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Cookies</h1>
+            <p>Freshly baked cookies in delicious flavors</p>
         </div>
+    </section>
 
-        <div class="product-card">
-            <img src="https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Oatmeal Cookies" />
-            <h3>Oatmeal Raisin</h3>
-            <p class="price">110 NOK</p>
-            <a href="product.html?product=oatmeal-cookies" class="btn">View Details</a>
-        </div>
+    <section class="products-section">
+        <div class="container">
+            <div id="products-grid" class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chocolate Chip Cookies">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chocolate Chip Cookies</h3>
+                        <p>Classic chocolate chip (dozen)</p>
+                        <p class="price">$12.00</p>
+                        <button class="btn btn-primary" onclick="viewProduct(11)">View Details</button>
+                    </div>
+                </div>
 
-        <div class="product-card">
-            <img src="https://images.pexels.com/photos/1179002/pexels-photo-1179002.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Double Chocolate Cookies" />
-            <h3>Double Chocolate</h3>
-            <p class="price">130 NOK</p>
-            <a href="product.html?product=double-chocolate-cookies" class="btn">View Details</a>
-        </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/1860202/pexels-photo-1860202.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Oatmeal Raisin Cookies">
+                    </div>
+                    <div class="product-info">
+                        <h3>Oatmeal Raisin Cookies</h3>
+                        <p>Hearty oats with sweet raisins (dozen)</p>
+                        <p class="price">$11.00</p>
+                        <button class="btn btn-primary" onclick="viewProduct(12)">View Details</button>
+                    </div>
+                </div>
 
-        <div class="product-card">
-            <img src="https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Peanut Butter Cookies" />
-            <h3>Peanut Butter Bliss</h3>
-            <p class="price">115 NOK</p>
-            <a href="product.html?product=peanut-butter-cookies" class="btn">View Details</a>
-        </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/4110256/pexels-photo-4110256.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sugar Cookies">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sugar Cookies</h3>
+                        <p>Sweet and simple decorated cookies (dozen)</p>
+                        <p class="price">$13.00</p>
+                        <button class="btn btn-primary" onclick="viewProduct(13)">View Details</button>
+                    </div>
+                </div>
 
-        <div class="product-card">
-            <img src="https://images.pexels.com/photos/1179002/pexels-photo-1179002.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gingerbread Cookies" />
-            <h3>Gingerbread Joy</h3>
-            <p class="price">125 NOK</p>
-            <a href="product.html?product=gingerbread-cookies" class="btn">View Details</a>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/5945805/pexels-photo-5945805.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Double Chocolate Cookies">
+                    </div>
+                    <div class="product-info">
+                        <h3>Double Chocolate Cookies</h3>
+                        <p>Extra chocolatey goodness (dozen)</p>
+                        <p class="price">$14.00</p>
+                        <button class="btn btn-primary" onclick="viewProduct(14)">View Details</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
+</main>
 
 <footer>
-    <div class="footer-content">
-        <p>
-            AfnanBakes is a local bakery specializing in handcrafted cakes,
-            cupcakes, and cookies for all celebrations.
-        </p>
-        <div class="social-icons">
-            <a href="#" title="Instagram">📷</a>
-            <a href="#" title="Facebook">👍</a>
-            <a href="#" title="TikTok">🎵</a>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AfnanBakes</h4>
+                <p>Baking happiness since 2020</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">My Account</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="cakes.html">Cakes</a></li>
+                    <li><a href="cupcakes.html">Cupcakes</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                </ul>
+            </div>
         </div>
-        <p class="copyright">Copyright © 2025 AfnanBakes</p>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AfnanBakes. All rights reserved.</p>
+        </div>
     </div>
 </footer>
 

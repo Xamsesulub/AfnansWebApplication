@@ -5,50 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cakes - AfnanBakes</title>
     <link rel="stylesheet" href="style.css">
-    <script  defer src="script.js"></script>
+    <script src="main.js"></script>
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="cakes.html">Cakes</a></li>
-        <li><a href="cupcakes.html">Cupcakes</a></li>
-        <li><a href="cookies.html">Cookies</a></li>
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Signup</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">AfnanBakes</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cakes.html" class="active">Cakes</a></li>
+                <li><a href="cupcakes.html">Cupcakes</a></li>
+                <li><a href="cookies.html">Cookies</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link">Cart <span id="cart-count">0</span></a></li>
+                <li id="auth-nav"></li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
-<div class="container">
-    <h1 class="page-title">Our Cakes</h1>
-    <div class="product-grid">
-        <div class="product-card">
-            <img src="https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wedding Cake">
-            <h3>Wedding Elegance</h3>
-            <p class="price">400 NOK</p>
-            <a href="product.html" class="btn">View Details</a>
+<main>
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Cakes</h1>
+            <p>Beautiful custom cakes for every celebration</p>
         </div>
-        <div class="product-card">
-            <img src="https://images.pexels.com/photos/1702373/pexels-photo-1702373.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Birthday Cake">
-            <h3>Birthday Delight</h3>
-            <p class="price">350 NOK</p>
-            <a href="product.html" class="btn">View Details</a>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <div id="products-grid" class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/1702373/pexels-photo-1702373.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chocolate Cake">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chocolate Cake</h3>
+                        <p>Rich chocolate layers with creamy frosting</p>
+                        <p class="price">$45.00</p>
+                        <button class="btn btn-primary" onclick="viewProduct(1)">View Details</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Vanilla Cake">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vanilla Cake</h3>
+                        <p>Classic vanilla cake with buttercream</p>
+                        <p class="price">$40.00</p>
+                        <button class="btn btn-primary" onclick="viewProduct(2)">View Details</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/1721932/pexels-photo-1721932.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Red Velvet Cake">
+                    </div>
+                    <div class="product-info">
+                        <h3>Red Velvet Cake</h3>
+                        <p>Smooth red velvet with cream cheese frosting</p>
+                        <p class="price">$50.00</p>
+                        <button class="btn btn-primary" onclick="viewProduct(3)">View Details</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/2144112/pexels-photo-2144112.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Strawberry Cake">
+                    </div>
+                    <div class="product-info">
+                        <h3>Strawberry Cake</h3>
+                        <p>Fresh strawberries and light cream</p>
+                        <p class="price">$48.00</p>
+                        <button class="btn btn-primary" onclick="viewProduct(4)">View Details</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/1128005/pexels-photo-1128005.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Carrot Cake">
+                    </div>
+                    <div class="product-info">
+                        <h3>Carrot Cake</h3>
+                        <p>Moist carrot cake with cream cheese icing</p>
+                        <p class="price">$42.00</p>
+                        <button class="btn btn-primary" onclick="viewProduct(5)">View Details</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/6940997/pexels-photo-6940997.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Lemon Cake">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lemon Cake</h3>
+                        <p>Zesty lemon with light buttercream</p>
+                        <p class="price">$43.00</p>
+                        <button class="btn btn-primary" onclick="viewProduct(6)">View Details</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
+</main>
 
 <footer>
-    <div class="footer-content">
-        <p>AfnanBakes is a local bakery specializing in handcrafted cakes, cupcakes, and cookies for all celebrations.</p>
-        <div class="social-icons">
-            <a href="#">📷</a>
-            <a href="#">👍</a>
-            <a href="#">🎵</a>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AfnanBakes</h4>
+                <p>Baking happiness since 2020</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">My Account</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="cakes.html">Cakes</a></li>
+                    <li><a href="cupcakes.html">Cupcakes</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                </ul>
+            </div>
         </div>
-        <p class="copyright">Copyright © 2025 AfnanBakes</p>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AfnanBakes. All rights reserved.</p>
+        </div>
     </div>
 </footer>
 
