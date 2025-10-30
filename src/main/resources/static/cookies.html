@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookies - AfnanBakes</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+    <script defer src="js/cart.js"></script>
 </head>
 <body>
 <header>
@@ -39,7 +40,8 @@
     <section class="products-section">
         <div class="container">
             <div id="products-grid" class="products-grid">
-                <div class="product-card">
+
+                <div class="product-card" onclick="viewProduct(11)">
                     <div class="product-image">
                         <img src="https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chocolate Chip Cookies">
                     </div>
@@ -47,11 +49,10 @@
                         <h3>Chocolate Chip Cookies</h3>
                         <p>Classic chocolate chip (dozen)</p>
                         <p class="price">$12.00</p>
-                        <button class="btn btn-primary" onclick="viewProduct(11)">View Details</button>
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" onclick="viewProduct(12)">
                     <div class="product-image">
                         <img src="https://images.pexels.com/photos/1860202/pexels-photo-1860202.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Oatmeal Raisin Cookies">
                     </div>
@@ -59,11 +60,10 @@
                         <h3>Oatmeal Raisin Cookies</h3>
                         <p>Hearty oats with sweet raisins (dozen)</p>
                         <p class="price">$11.00</p>
-                        <button class="btn btn-primary" onclick="viewProduct(12)">View Details</button>
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" onclick="viewProduct(13)">
                     <div class="product-image">
                         <img src="https://images.pexels.com/photos/4110256/pexels-photo-4110256.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sugar Cookies">
                     </div>
@@ -71,11 +71,10 @@
                         <h3>Sugar Cookies</h3>
                         <p>Sweet and simple decorated cookies (dozen)</p>
                         <p class="price">$13.00</p>
-                        <button class="btn btn-primary" onclick="viewProduct(13)">View Details</button>
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" onclick="viewProduct(14)">
                     <div class="product-image">
                         <img src="https://images.pexels.com/photos/5945805/pexels-photo-5945805.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Double Chocolate Cookies">
                     </div>
@@ -83,9 +82,9 @@
                         <h3>Double Chocolate Cookies</h3>
                         <p>Extra chocolatey goodness (dozen)</p>
                         <p class="price">$14.00</p>
-                        <button class="btn btn-primary" onclick="viewProduct(14)">View Details</button>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -120,7 +119,6 @@
         </div>
     </div>
 </footer>
-
 
 </body>
 </html>

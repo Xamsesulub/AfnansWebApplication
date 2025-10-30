@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cupcakes - AfnanBakes</title>
-    <link rel="stylesheet" href="style.css">
-    <script  defer src="main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+    <script defer src="js/cart.js"></script>
 </head>
 <body>
 <header>
@@ -39,7 +40,8 @@
     <section class="products-section">
         <div class="container">
             <div id="products-grid" class="products-grid">
-                <div class="product-card">
+
+                <div class="product-card" onclick="viewProduct(7)">
                     <div class="product-image">
                         <img src="https://images.pexels.com/photos/887853/pexels-photo-887853.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chocolate Cupcakes">
                     </div>
@@ -47,11 +49,10 @@
                         <h3>Chocolate Cupcakes</h3>
                         <p>Rich chocolate with chocolate frosting (6 pack)</p>
                         <p class="price">$18.00</p>
-                        <button class="btn btn-primary" onclick="viewProduct(7)">View Details</button>
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" onclick="viewProduct(8)">
                     <div class="product-image">
                         <img src="https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Vanilla Cupcakes">
                     </div>
@@ -59,11 +60,10 @@
                         <h3>Vanilla Cupcakes</h3>
                         <p>Classic vanilla with buttercream (6 pack)</p>
                         <p class="price">$16.00</p>
-                        <button class="btn btn-primary" onclick="viewProduct(8)">View Details</button>
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" onclick="viewProduct(9)">
                     <div class="product-image">
                         <img src="https://images.pexels.com/photos/1395319/pexels-photo-1395319.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Red Velvet Cupcakes">
                     </div>
@@ -71,11 +71,10 @@
                         <h3>Red Velvet Cupcakes</h3>
                         <p>Red velvet with cream cheese frosting (6 pack)</p>
                         <p class="price">$20.00</p>
-                        <button class="btn btn-primary" onclick="viewProduct(9)">View Details</button>
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" onclick="viewProduct(10)">
                     <div class="product-image">
                         <img src="https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Strawberry Cupcakes">
                     </div>
@@ -83,9 +82,9 @@
                         <h3>Strawberry Cupcakes</h3>
                         <p>Fresh strawberry flavor (6 pack)</p>
                         <p class="price">$19.00</p>
-                        <button class="btn btn-primary" onclick="viewProduct(10)">View Details</button>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -121,6 +120,5 @@
     </div>
 </footer>
 
-<script  defer src="main.js"></script>
 </body>
 </html>

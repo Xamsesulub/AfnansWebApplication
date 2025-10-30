@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details - AfnanBakes</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+    <script defer src="js/cart.js"></script> <!-- ✅ VIKTIG -->
 </head>
 <body>
 <header>
@@ -50,7 +51,10 @@
                     </div>
 
                     <button class="btn btn-primary btn-large" onclick="addToCartFromProduct()">Add to Cart</button>
-                    <a href="cakes.html" class="btn btn-secondary btn-large">Back to Products</a>
+
+                    <!-- ✅ Dynamisk tilbake-lenke -->
+                    <a id="back-to-products" class="btn btn-secondary btn-large">Back to Products</a>
+
                 </div>
             </div>
         </div>
@@ -86,7 +90,6 @@
         </div>
     </div>
 </footer>
-
 
 </body>
 </html>
